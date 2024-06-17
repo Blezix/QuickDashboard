@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Button, IconButton } from "@mui/material";
+import { Box, Typography, IconButton } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import { tokens } from "../../theme";
 import SearchIcon from "@mui/icons-material/Search";
@@ -7,6 +7,7 @@ import InputBase from "@mui/material/InputBase";
 import MailIcon from "@mui/icons-material/MailOutline";
 import NotificationsIcon from "@mui/icons-material/NotificationsNone";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+
 export default function Topbar(width, sx) {
   const theme = useTheme;
   const colors = tokens(theme.pallete);

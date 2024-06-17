@@ -3,8 +3,10 @@ import { useMemo } from "react";
 import { tokens, themeSettings } from "./theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { createTheme } from "@mui/material/styles";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Topbar from "./scenes/global/Topbar";
+import Sidebar from "./scenes/global/Sidebar";
 function App() {
   const colors = tokens();
   return (
@@ -14,12 +16,24 @@ function App() {
         bgcolor={colors.grey[200]}
         width={"100%"}
         height={"100vh"}
+        display="flex"
+        flexDirection="column"
       >
         <Topbar width={"100%"} />
-        <Box className="content"> </Box>
+        <Box display="flex" flexGrow={1}>
+        <Router>
+          <Sidebar />
+          <Box display="flex" flexGrow={1} sx={{height:"88vh", width:"70%"}} bgcolor={colors.black[800]} className="content"> 
+          <Routes>
+            <Route path="/" element={<h1>Home</h1>} />
+              </Routes>
+            </Box>
+            </Router>
+
+        </Box>
+
       </Box>
     </ThemeProvider>
   );
 }
-
 export default App;
