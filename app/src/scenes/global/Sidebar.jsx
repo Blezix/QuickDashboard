@@ -15,7 +15,7 @@ export default function Sidebar() {
             zIndex: "0",
             position: "relative",
             height: "80vh",
-            width: "60%",
+            width: "75%",
             marginTop: "6%",
             marginLeft: "20%",
 

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
+import Dashboard from "./scenes/Dashboard/Dashboard";
 function App() {
   const colors = tokens();
   return (
@@ -23,9 +24,9 @@ function App() {
         <Box display="flex" flexGrow={1}>
         <Router>
           <Sidebar />
-          <Box display="flex" flexGrow={1} sx={{height:"88vh", width:"70%"}} bgcolor={colors.black[800]} className="content"> 
+          <Box display="flex" flexGrow={1} sx={{height:"88vh", width:"80%"}}  className="content"> 
           <Routes>
-            <Route path="/" element={<h1>Home</h1>} />
+            <Route path="/" element={<Dashboard></Dashboard>} />
               </Routes>
             </Box>
             </Router>
