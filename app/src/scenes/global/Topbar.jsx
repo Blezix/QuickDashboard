@@ -14,29 +14,30 @@ export default function Topbar(width, sx) {
   return (
     <Box
       width={width}
-      sx={{ height: "12%" }}
+      sx={{ height: "15%" }}
       display="flex"
       justifyContent="space-between"
       alignItems="center"
       bgcolor="white"
+      paddingRight={"40px"}
+      paddingTop={"20px"}
     >
       <Box
-        width="10%"
+        marginLeft={"80px"}
         display={"flex"}
-        alignItems="center"
-        justifyContent="space-around"
+        alignItems="left"
+        flexDirection={"column"}
       >
-        <Box
-          sx={{ height: "50px", width: "50px", borderRadius: "50px" }}
-          bgcolor={colors.grey[600]}
-        ></Box>
-        <Typography variant="h5" color="initial">
-          Logo
+        <Typography variant="h5" fontSize={"1.8rem"}>
+          Welcome Back, User!
+        </Typography>
+        <Typography color={colors.grey[700]}>
+          Here's whats new with your business
         </Typography>
       </Box>
       <Box
         height={"50%"}
-        width={"60%"}
+        width={"15%"}
         display={"flex"}
         justifyContent="space-between"
         alignItems="center"
@@ -48,21 +49,17 @@ export default function Topbar(width, sx) {
             }}
           />
         </IconButton>
-        <InputBase
-          sx={{ ml: 2, flex: 1, width: "50%" }}
-          placeholder="Search here"
-        />
-        <IconButton>
-          <MailIcon sx={{ fill: colors.grey[500], fill: colors.grey[500] }} />
-        </IconButton>
+
         <IconButton>
           <NotificationsIcon sx={{ fill: colors.grey[500] }} />
         </IconButton>
-        <IconButton>
+        <IconButton border="1px solid lightgrey">
           <Box
             sx={{ height: "35px", width: "35px", borderRadius: "50px" }}
             bgcolor={colors.grey[400]}
-          ></Box>
+            
+></Box>
+          <Typography marginLeft={"10px"} fontWeight={"bold"}>Jakub Milosz</Typography>
           <ArrowDropDownIcon sx={{ fill: colors.grey[700] }} />
         </IconButton>
       </Box>

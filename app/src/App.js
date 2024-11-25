@@ -20,19 +20,22 @@ function App() {
         display="flex"
         flexDirection="column"
       >
-        <Topbar width={"100%"} />
         <Box display="flex" flexGrow={1}>
-        <Router>
-          <Sidebar />
-          <Box display="flex" flexGrow={1} sx={{height:"88vh", width:"80%"}}  className="content"> 
-          <Routes>
-            <Route path="/" element={<Dashboard></Dashboard>} />
+          <Router>
+            <Sidebar />
+            <Box
+              display="flex"
+              flexGrow={1}
+              sx={{ height: "100%", width: "90%", flexDirection: "column" }}
+              className="content"
+            >
+              <Topbar />
+              <Routes width={"90%"}>
+                <Route path="/" element={<Dashboard></Dashboard>} />
               </Routes>
             </Box>
-            </Router>
-
+          </Router>
         </Box>
-
       </Box>
     </ThemeProvider>
   );
